@@ -1,0 +1,178 @@
+/* 🌌 DazlFlow Waitlist — Complete Styling */
+:root {
+  /* 🎨 Color Palette */
+  --color-primary: #537E94;     /* Deep Steel Blue */
+  --color-secondary: #496D80;   /* Slate Indigo */
+  --color-accent: #39A5DB;      /* Bright Teal */
+  --color-light: #C5EAFC;       /* Sky Mist */
+  --color-deep: #15506E;        /* Ocean Depth */
+
+  /* 🖋️ Typography */
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #fff;
+  color: var(--color-secondary);
+  line-height: 1.6;
+}
+
+/* 🔹 Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-deep);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--color-accent);
+}
+
+/* 🔹 Hero Header */
+header {
+  text-align: center;
+  padding: 60px 20px 20px;
+  background-color: var(--color-light);
+}
+
+header h1 {
+  font-family: var(--font-heading);
+  font-size: 3em;
+  color: var(--color-primary);
+  margin-bottom: 0.3em;
+  font-weight: 400;
+}
+
+header p {
+  font-size: 1.2em;
+  color: var(--color-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 🔹 Form Section */
+.waitlist-form {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+  padding: 0 20px;
+}
+
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(21, 80, 110, 0.15);
+  width: 100%;
+  max-width: 380px;
+}
+
+form label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 0.95em;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+  font-size: 1em;
+  font-family: var(--font-body);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(57, 165, 219, 0.2);
+}
+
+form button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+/* 🔹 Emotional Quote (Optional Below Form) */
+.emotional-quote {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1.2em;
+  color: var(--color-primary);
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
+/* 🔹 Footer */
+footer {
+  text-align: center;
+  margin: 60px 0 40px;
+  padding: 20px;
+  color: var(--color-deep);
+  font-size: 0.9em;
+}
+img {
+  max-width: 80px;
+  margin-top: 20px;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .waitlist-form {
+    margin: 30px 0;
+  }
+
+  form {
+    padding: 20px;
+  }
+}
