@@ -32,6 +32,12 @@ nav ul {
   justify-content: center;
   gap: 30px;
   margin-bottom: 30px;
+
+}
+nav {
+  background-color: var(--color-light);
+  padding: 20px 0;
+
 }
 
 nav a {
