@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
@@ -126,10 +125,12 @@ body {
   padding: 20px;
   font-size: 0.9rem;
   color:#15506E;
+  font-family: var(--body-font);
 }
 p {
     font-family: var(--body-font);
 }
+
 
 /* Responsive Tweaks */
 @media screen and (max-width: 768px) {
