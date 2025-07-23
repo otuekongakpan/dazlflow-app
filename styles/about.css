@@ -1,0 +1,76 @@
+:root {
+  /* 🎨 Color Palette */
+  --color-primary: #537E94;     /* Deep Steel Blue */
+  --color-secondary: #496D80;   /* Slate Indigo */
+  --color-accent: #39A5DB;      /* Bright Teal */
+  --color-light: #C5EAFC;       /* Sky Mist */
+  --color-deep: #15506E;        /* Ocean Depth */
+
+  /* 🖋️ Typography */
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+/* Section layout */
+.mission-vision {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #C5EAFC; /* Soft ambient backdrop */
+}
+
+/* Shared card styles */
+.card {
+  width: 45%;
+  min-width: 280px;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #15506E; /* Deep dark ocean */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #C5EAFC; /* Light text color */
+  transition: all 0.3s ease;
+}
+
+/* Hover glow */
+.card:hover {
+  box-shadow: 0 0 20px rgba(57, 165, 219, 0.6);
+  transform: scale(1.02);
+}
+
+/* Mission card border */
+.mission {
+  border: 3px solid #39A5DB; /* Vibrant blue accent */
+}
+
+/* Vision card border */
+.vision {
+  border: 3px solid #496D80;  /* Slate teal accent */
+  background-color: #496D80;  /* Dark card background */
+  color: #C5EAFC;             /* Light text for contrast */
+}
+
+/* Headings */
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  font-family: var(--font-heading);
+  color: #C5EAFC; /* Same light tone */
+  border-bottom: 1px solid rgba(197, 234, 252, 0.4);
+  padding-bottom: 6px;
+}
+
+/* Paragraph text */
+.card p {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #C5EAFC;
+}
+
+/* Responsive tweak */
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,148 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #C5EAFC; /* Soft ambient backdrop */
+  color: #C5EAFC;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #15506E;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #C5EAFC;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #C5EAFC;
+}
+
+.cta {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #39A5DB;
+  color: #15506E;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #537E94;
+  color: #C5EAFC;
+}
+
+/* About Section */
+.about {
+  background-color: #496D80;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #C5EAFC;
+}
+
+.about p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #C5EAFC;
+}
+
+/* Moods Section */
+.moods {
+  background-color: #537E94;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.moods h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #C5EAFC;
+}
+
+.mood-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mood-card {
+  background-color: #15506E;
+  color: #C5EAFC;
+  border: 2px solid #39A5DB;
+  border-radius: 10px;
+  padding: 15px 20px;
+  width: 130px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.mood-card:hover {
+  box-shadow: 0 0 12px #39A5DB;
+}
+
+/* Creator CTA */
+.creator-cta {
+  background-color: #496D80;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.creator-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #C5EAFC;
+}
+
+.creator-cta p {
+  margin-bottom: 25px;
+  color: #C5EAFC;
+}
+
+/* Footer */
+.footer {
+
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color:#15506E;
+}
+p {
+    font-family: var(--body-font);
+}
+
+/* Responsive Tweaks */
+@media screen and (max-width: 768px) {
+  .mood-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card, .mood-card {
+    width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
