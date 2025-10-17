@@ -1,13 +1,12 @@
-/* 🌌 DazlFlow Waitlist — Complete Styling */
-:root {
-  /* 🎨 Color Palette */
-  --color-primary: #537E94;     /* Deep Steel Blue */
-  --color-secondary: #496D80;   /* Slate Indigo */
-  --color-accent: #39A5DB;      /* Bright Teal */
-  --color-light: #C5EAFC;       /* Sky Mist */
-  --color-deep: #15506E;        /* Ocean Depth */
 
-  /* 🖋️ Typography */
+:root {
+  --bg-color: #22577A; /*Bahama Blue: footer background*/
+  --card-color1: #38A3A5;
+  --card-color2: #80ED99;
+  --accent-color: #C7F9CC; /*Tea green*/
+  --button-color: #57CC99; /*Emerald: for cta buttons, highlights*/
+  --text-color1: #C5EAFC; /*Cloud Light: for dark BG, glows*/
+  --text-color2: #0f0f0f; /*Smoky Black: for text on light BG*/
   --font-heading: 'DM Serif Display', serif;
   --font-body: 'Inter', sans-serif;
 }
@@ -16,172 +15,268 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
   font-family: var(--font-body);
-  background-color: #fff;
-  color: var(--color-secondary);
-  line-height: 1.6;
 }
 
-/* 🔹 Navigation */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 30px;
 
-}
-nav {
-  background-color: var(--color-light);
-  padding: 20px 0;
-
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--color-deep);
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--color-accent);
-}
-
-/* 🔹 Hero Header */
 header {
+  position: sticky;
+  top: 0; /* required for it to stick */
+  background: white;
+}
+
+main, footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: center;
+}
+
+nav {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.navContent {
+  position: sticky;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  
+}
+
+.logo-img img{
   text-align: center;
-  padding: 60px 20px 20px;
-  background-color: var(--color-light);
 }
 
-header h1 {
-  font-family: var(--font-heading);
-  font-size: 3em;
-  color: var(--color-primary);
-  margin-bottom: 0.3em;
-  font-weight: 400;
+.logo-img {
+  text-align: left;
+  padding-bottom: 0px;
 }
 
-header p {
-  font-size: 1.2em;
-  color: var(--color-secondary);
-  max-width: 600px;
-  margin: 0 auto;
+.nav-main {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+text-align: center;
+gap: 2px;
+padding: 1px;
 }
 
-/* 🔹 Form Section */
-.waitlist-form {
-  display: flex;
+.main1, .main2, .main3 {
+  margin: 5px;
+  border: 5px;
+  padding: 5px;
+  font-family: var(--font-body);
+}
+
+.nav-main a {
+
+  text-decoration: none;
+  color: var(--text-color2)
+
+}
+
+.nav-cta a {
+  float: right;
+  text-decoration: none;
+  color: var(--text-color2);
+  font-family: var(--font-body);
+  font-weight: bold;
+  border: solid var(--accent-color) 2px;
+  border-radius: 8px;
+  padding: 10px 15px;
+  background-color: var(--button-color);
+
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
   justify-content: center;
-  margin: 50px 0;
-  padding: 0 20px;
 }
 
-form {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(21, 80, 110, 0.15);
-  width: 100%;
-  max-width: 380px;
+.hero-img {
+  width: 250px;
+  height: 350px;
+  border: solid var(--accent-color) 3px;
+  border-radius: 10px;
 }
 
-form label {
-  display: block;
-  margin-top: 20px;
-  font-weight: 600;
-  color: var(--color-primary);
-  font-size: 0.95em;
+.header{
+  padding-bottom: 20px;
 }
 
-form input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 8px;
-  border: 1px solid var(--color-primary);
-  border-radius: 6px;
-  font-size: 1em;
-  font-family: var(--font-body);
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-form input:focus {
-  outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(57, 165, 219, 0.2);
-}
-
-form button {
-  margin-top: 30px;
-  width: 100%;
-  padding: 12px;
-  background-color: var(--color-accent);
-  border: none;
-  border-radius: 6px;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1em;
-  cursor: pointer;
-  font-family: var(--font-body);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-form button:hover {
-  background-color: var(--color-primary);
-  transform: translateY(-2px);
-}
-
-/* 🔹 Emotional Quote (Optional Below Form) */
-.emotional-quote {
-  text-align: center;
+.header h1 {
   font-family: var(--font-heading);
-  font-size: 1.2em;
-  color: var(--color-primary);
-  margin-top: 20px;
-  opacity: 0.8;
+  padding-top: 20px;
+  line-height: 0.4;
+ 
+}
+.text p {
+  font-family: var(--body-font);
+  padding-bottom: 20px;
+  text-align: justify;
+
 }
 
-/* 🔹 Footer */
+.text a {
+  text-decoration: none;
+  padding-top: 20px;
+  color: var(--text-color2);
+  font-family: var(--font-body);
+  font-weight: bold;
+  border: solid var(--accent-color) 2px;
+  border-radius: 8px;
+  padding: 10px 15px;
+  background-color: var(--button-color);
+
+}
+
+h3{
+ padding-bottom: 10px;
+}
+
+p{
+  line-height: 1.8;
+}
+
+#italic {
+  font-style: italic;
+  color: var(--bg-color);
+  font-weight: bold;
+}
+
+#indies {
+  font-family: var(--font-heading);
+  color: var(--bg-color)
+}
+
+#sound {
+  font-family: var(--font-heading);
+  color: var(--button-color)
+
+} 
+
+.ultimate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about h2 {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-family: var(--font-body);
+  font-weight: bolder;
+}
+
+.about p {
+  padding-bottom: 20px;
+
+}
+.about {
+  text-align: center;
+}
+
+.see-more-btn {
+  text-decoration: none;
+  color: var(--text-color2);
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--button-color);
+  padding: 10px;
+
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+
+}
+
+.moods {
+  text-align: center;
+}
+
+.moods h2 {
+  padding-top: 50px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 20px;
+    gap: 10px;
+
+}
+
+.mood-card {
+  
+}
+
+#creator {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#creator p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.start-creating-btn {
+  text-decoration: none;
+  color: var(--text-color2);
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--button-color);
+  padding: 10px;
+
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+
+}
+
 footer {
   text-align: center;
-  margin: 60px 0 40px;
-  padding: 20px;
-  color: var(--color-deep);
-  font-size: 0.9em;
-}
-img {
-  max-width: 80px;
-  margin-top: 20px;
-  border-radius: 50%;
-
-
 }
 
-/* 🔹 Responsive Design */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2em;
+@media screen and (max-width: 600px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  header p {
-    font-size: 1em;
+  .hero-grid-img {
+    display: none; /* Hide image on mobile */
   }
 
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
+  .hero-grid-text {
+    align-items: center;
+    justify-content: center;
   }
 
-  .waitlist-form {
-    margin: 30px 0;
+  .hero-grid-text h1 {
+    font-size: 2.2rem;
   }
 
-  form {
-    padding: 20px;
+  .cta {
+    margin: 1.5rem auto 0;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .text p {
+    text-align: center;
   }
 }
+  
+
+
+

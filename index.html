@@ -4,57 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DazlFlow Home</title>
-    <meta name="description" content="Welcome to DazlFlow, a platform ">
+    
     <meta name="keywords" content="DazlFlow, music, waitlist, indie music,">
     <meta name="author" content="DazlFlow Team">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="icon" href="images/dazicon2.png" type="images/favicon/png">
+    <meta name="description" content="Welcome to DazlFlow — a music platform built for indie creators, fans, and dreamers. Join the waitlist and be part of a music revolution.">
+
+    <link rel="icon" href="images/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body> 
-    <header>
-        <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="waitlist.html">Join Waitlist</a></li>
-        </ul>
-        </nav>
-        <img src="images/dazicon.png" alt="DazlFlow Logo" class="logo">
-        <h1>DazlFlow</h1>
+  <main>
+      <header>
+          <nav class="navContent">
+            <div class="nav-grid">
+              <div class="nav-logo">
+                <div class="logo-img">
+                  <img src="images/favicon2.png" alt="DazlFlow Logo" class="logo" width="55" height="39">
+                </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Built for Indies. Inspired by Sound.</h1>
-    <p>Join the DazlFlow waitlist and be part of a music revolution.</p>
-    <a href="waitlist.html" class="cta">Join the Waitlist</a>
-  </section>
+              </div>
+              <div class="nav-main">
+                <div class="main1">
+                  <a href="index.html">Home</a>
+                </div>
+                <div class="main2">
+                  <a href="about.html">About Us</a>
+                </div>
+                <div class="main3">
+                  <a href="contact.html">Contact</a>
+                </div>
+              </div>
+              <div class="nav-cta">
+                <a href="waitlist.html">Join Waitlist</a>
+              </div>
+            </div>
+          </nav>
 
-  <!-- About Section -->
-  <section class="about">
-    <h2>Meet DazlFlow</h2>
-    <p>A music ecosystem crafted for emerging talent, powered by Daz—our intuitive AI that curates sound based on emotion and energy.</p>
-  </section>
+      </header>
 
-  <!-- Mood Grid Section -->
-  <section class="moods">
-    <h2>Find Your Flow</h2>
-    <div class="mood-grid">
-      <div class="mood-card">🌙 Chill</div>
-      <div class="mood-card">🔥 Hype</div>
-      <div class="mood-card">🌊 Melancholy</div>
-      <div class="mood-card">⚡ Euphoric</div>
-    </div>
-  </section>
+ 
+    <section class="hero">
+      <div class="hero-grid">
+          <div class="hero-grid-text">
+            <div class="ultimate">
+              <div class="header">
+                <h1>Built for <span id="indies">Indies</span>, </h1>
+                <h1>Inspired by <span id="sound">Sound</span>.</h1>
+              </div>
+              <div class="text">
+                <h3>Join the DazlFlow waitlist and be part of a music revolution.</h3>
+                <p>Be among the first to experience an ecosystem built for creators, fans, and dreamers
+                </p>
+                <p id="italic">This isn’t just music — it’s momentum.</p>
 
-  <!-- Creator CTA Section -->
-  <section class="creator-cta" id="creator">
-    <h2>Creators, Take Control</h2>
-    <p>Upload. Remix. Monetize. DazlFlow gives you the tools to thrive on your terms.</p>
-    <a href="#contact" class="cta">Start Creating</a>
-  </section>
+                <a href="waitlist.html" class="cta">Join the Waitlist</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-grid-img">
+            <img src="images/hero.jpg" alt="hero image" class="hero-img">
+          </div>
+      </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <h2>Meet DazlFlow</h2>
+      <p>A music ecosystem crafted for emerging talent, powered by Daz—our intuitive AI that curates sound based on emotion and energy.</p>
+      <a href=".html" class="see-more-btn">See More</a>
+    </section>
+
+    <!-- Mood Grid Section -->
+    <section class="moods">
+      <h2>Find Your Flow</h2>
+
+      <div class="cards">
+        <div class="mood-card">
+          <span class="emoji">🌙</span>
+          <h3>Chill</h3>
+          <p>Relax and unwind with smooth, low-tempo vibes.</p>
+        </div>
+
+        <div class="mood-card">
+          <span class="emoji">🔥</span>
+          <h3>Hype</h3>
+          <p>Feel the energy — beats that keep you moving.</p>
+        </div>
+
+        <div class="mood-card">
+          <span class="emoji">🌊</span>
+          <h3>Melancholy</h3>
+          <p>Deep, emotional tracks for reflective moments.</p>
+        </div>
+
+        <div class="mood-card">
+          <span class="emoji">⚡</span>
+          <h3>Euphoric</h3>
+          <p>Get lost in high-energy sounds and pure bliss.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Creator CTA Section -->
+    <section class="creator-cta" id="creator">
+      <h2>Creators, Take Control</h2>
+      <p>Upload. Remix. Monetize. DazlFlow gives you the tools to thrive on your terms.</p>
+      <a href="waitlist.html" class="start-creating-btn">Start Creating</a>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
