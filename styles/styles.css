@@ -212,10 +212,6 @@ p{
 
 }
 
-.mood-card {
-  
-}
-
 #creator {
   padding-top: 50px;
   padding-bottom: 20px;
@@ -250,7 +246,7 @@ footer {
     text-align: center;
   }
 
-  .hero-grid-img {
+  .hero-img {
     display: none; /* Hide image on mobile */
   }
 
@@ -268,7 +264,6 @@ footer {
   }
 
   .cards {
-    display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -276,7 +271,7 @@ footer {
     text-align: center;
   }
 }
-  
+
 
 
 
