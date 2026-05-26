@@ -6,7 +6,7 @@ import requests  # Import the new library
 app = Flask(__name__)
 
 # Replace this string with your exact deployment link from Step 3!
-GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbzezGe2dOdLUFZhVA2NWY9JrCzfdx1CQKFEIn5S4K00CKJvBc7moHx4P_gnJdrVrmEa/exec"
+GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbwlPXiVr4vLxR8LL0XBXzsrYuL2qhou-_JxM5anO_mHwp8P_Q6chlA41nfFZfRVOqY/exec"
 
 @app.route('/')
 def home():
