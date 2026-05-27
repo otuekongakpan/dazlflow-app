@@ -14,111 +14,328 @@
 
     <link rel="icon" href="static/images/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
 </head>
 <body> 
   <main>
       <header>
           <nav class="navContent">
             <div class="nav-grid">
-              <div class="nav-logo">
-                <div class="logo-img">
-                  <img src="static/images/favicon2.png" alt="DazlFlow Logo" class="logo" width="55" height="39">
+                <div class="nav-logo">
+                    <div class="logo-img">
+                        <img src="static/images/favicon2.png" alt="DazlFlow Logo" class="logo" width="55" height="39">
+                    </div>
                 </div>
-
-              </div>
-            <div class="nav-main">
-              <div class="main1">
-                  <a href="/">Home</a>
-              </div>
-              <div class="main2">
-                  <a href="/about">About Us</a>
-              </div>
-              <div class="main3">
-                  <a href="/contact">Contact</a>
-              </div>
+                
+                <div class="nav-main">
+                    <div class="main1">
+                        <a href="#home">Home</a>
+                    </div>
+                    <div class="main2">
+                        <a href="#ecosystem">The Ecosystem</a>
+                    </div>
+                    <div class="main3">
+                        <a href="#about">The Manifesto</a>
+                    </div>
+                    <div class="main4">
+                        <a href="#roadmap">The Horizon</a>
+                    </div>
+                    <div class="main5">
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="cta">
+                    <a href="#waitlist">Join Waitlist</a>
+                </div>
             </div>
-            <div class="nav-cta">
-                <a href="/waitlist">Join Waitlist</a>
-            </div>
-          </div>
           </nav>
-
       </header>
 
- 
-    <section class="hero">
-      <div class="hero-grid">
-          <div class="hero-grid-text">
-            <div class="ultimate">
+      <section id="home" class="hero">
+          <div class="hero-center-container">
               <div class="header">
-                <h1>Built for <span id="indies">Indies</span>, </h1>
-                <h1>Inspired by <span id="sound">Sound</span>.</h1>
+                  <h1>YOUR MOOD.<br>YOUR MUSIC. YOUR <span id="sound">MIRROR</span>.</h1>
               </div>
               <div class="text">
-                <h3>Join the DazlFlow waitlist and be part of a music revolution.</h3>
-                <p>Be among the first to experience an ecosystem built for creators, fans, and dreamers
-                </p>
-                <p id="italic">This isn’t just music — it’s momentum.</p>
-
-                <a href="/waitlist" class="cta">Join the Waitlist</a>
+                  <p>An empathetic, poetic AI engineered to mirror your exact emotional frequency and translate raw feeling into sound.</p>
+                  <p>A dual-sided playground built to soothe or elevate your mood—without ever trying to "fix" it.</p>
+                  <p><em>This isn't just music — it's momentum.</em></p>
               </div>
-            </div>
+              <div class="hero-image-wrapper">
+                  <img src="static/images/hero.jpg" alt="Mirror Orb" class="hero-img">
+              </div>
+              <div class="cta">
+                  <a href="#" class="cta-join">Join the Waitlist</a>
+              </div>
           </div>
-          <div class="hero-grid-img">
-            <img src="static/images/hero.jpg" alt="hero image" class="hero-img">
+      </section>
+
+      <section class="experience-section">
+          <div class="experience-header">
+              <h2>How does your room feel right now?</h2>
+              <p>Test-drive Daz's emotional frequency mapping engine below.</p>
           </div>
-      </div>
 
-    </section>
+          <div class="mood-grid">
+              <button class="mood-btn" onclick="triggerDazMood('vulnerable', this)">Vulnerable</button>
+              <button class="mood-btn" onclick="triggerDazMood('numb', this)">Numb</button>
+              <button class="mood-btn" onclick="triggerDazMood('confident', this)">Confident</button>
+              <button class="mood-btn" onclick="triggerDazMood('focused', this)">Focused</button>
+              <button class="mood-btn" onclick="triggerDazMood('grateful', this)">Grateful</button>
+              <button class="mood-btn" onclick="triggerDazMood('tired', this)">Tired</button>
+          </div>
 
-    <!-- About Section -->
-    <section class="about">
-      <h2>Meet DazlFlow</h2>
-      <p>A music ecosystem crafted for emerging talent, powered by Daz—our intuitive AI that curates sound based on emotion and energy.</p>
-      <a href="about.html" class="see-more-btn">See More</a>
-    </section>
+          <div class="audio-control-container">
+              <button id="stop-audio-btn" class="stop-btn" onclick="stopAmbientStream()">✕ Stop Audio Stream</button>
+          </div>
 
-    <!-- Mood Grid Section -->
-    <section class="moods">
-      <h2>Find Your Flow</h2>
+          <div id="daz-feedback-box" class="daz-feedback">
+              <p class="daz-speaks" id="daz-voice">Select a frequency above to awaken Daz...</p>
+              <div class="metadata-tags" id="daz-metadata"></div>
+          </div>
+      </section>
+      
+      <section id="ecosystem" class="ecosystem-section">
+          <div class="ecosystem-header">
+              <span class="section-badge">The Architecture</span>
+              <h2>The Ecosystem Core</h2>
+              <p>A double-sided digital playground connecting dedicated listeners seamlessly with independent music culture through shared community infrastructure.</p>
+          </div>
 
-      <div class="cards">
-        <div class="mood-card">
-          <span class="emoji">🌙</span>
-          <h3>Chill</h3>
-          <p>Relax and unwind with smooth, low-tempo vibes.</p>
-        </div>
+          <h3 class="class-divider-title">🎧 Dazlflow <span class="subtitle">— The Listener Experience</span></h3>
+          <div class="ecosystem-cards-grid">
+              
+              <div class="feature-card clan-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">🧠</span>
+                      <h4>Mood-Based Discovery</h4>
+                  </div>
+                  <p>Advanced AI-powered streaming that maps your emotional state, tracking real-time psychological baselines, genre preferences, and the exact time of day.</p>
+              </div>
 
-        <div class="mood-card">
-          <span class="emoji">🔥</span>
-          <h3>Hype</h3>
-          <p>Feel the energy — beats that keep you moving.</p>
-        </div>
+              <div class="feature-card clan-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">🔊</span>
+                      <h4>High-Fidelity Playback</h4>
+                  </div>
+                  <p>Lossless audio rendering built with complete Dolby Atmos support, delivering pristine spatial room presence to the deep listener.</p>
+              </div>
 
-        <div class="mood-card">
-          <span class="emoji">🌊</span>
-          <h3>Melancholy</h3>
-          <p>Deep, emotional tracks for reflective moments.</p>
-        </div>
+              <div class="feature-card clan-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">📜</span>
+                      <h4>Real-Time Synchronized Lyrics</h4>
+                  </div>
+                  <p>Immersive, fluid typographic layouts that track the track’s performance step-by-step as it plays, keeping you locked into the storytelling.</p>
+              </div>
 
-        <div class="mood-card">
-          <span class="emoji">⚡</span>
-          <h3>Euphoric</h3>
-          <p>Get lost in high-energy sounds and pure bliss.</p>
-        </div>
-      </div>
+              <div class="feature-card clan-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">🎤</span>
+                      <h4>Built-In Karaoke Mode</h4>
+                  </div>
+                  <p>Instantly attenuate vocal layers with native frequency filters, allowing listeners to step directly onto the instrumental tracking themselves.</p>
+              </div>
 
-    </section>
+              <div class="feature-card clan-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">⚔️</span>
+                      <h4>The Gamified Clan Arena</h4>
+                  </div>
+                  <p>Move past passive streaming. Join the official dedicated Clan of the creator you follow. Represent your favorite artist in live sound battles, complete collective musical challenges, and dominate platform charts.</p>
+              </div>
 
-    <!-- Creator CTA Section -->
-    <section class="creator-cta" id="creator">
-      <h2>Creators, Take Control</h2>
-      <p>Upload. Remix. Monetize. DazlFlow gives you the tools to thrive on your terms.</p>
-      <a href="/waitlist" class="start-creating-btn">Start Creating</a>
-    </section>
+              <div class="feature-card clan-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">🏅</span>
+                      <h4>Unique Loyalty Badges</h4>
+                  </div>
+                  <p>Unlock immutable profile identifiers and tracking tokens that prove your historic chronological support within your creator's Clan ecosystem.</p>
+              </div>
+          </div>
+
+          <h3 class="class-divider-title culture-title-spacer">🎙️ Dazlflow for Creators <span class="subtitle">— The Artist Suite</span></h3>
+          <div class="ecosystem-cards-grid">
+
+              <div class="feature-card culture-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">💎</span>
+                      <h4>The 85/15 Standard</h4>
+                  </div>
+                  <p>An uncompromised framework keeping 85% of streaming and purchase revenue cleanly inside the artist's micro-economy from their very first play.</p>
+              </div>
+
+              <div class="feature-card culture-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">👑</span>
+                      <h4>Creator Clan Ownership</h4>
+                  </div>
+                  <p>Own and mobilize your core fanbase directly. Run exclusive community listening spaces, track your Clan's engagement performance, and issue rewards directly to your most loyal group of followers.</p>
+              </div>
+
+              <div class="feature-card culture-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">📊</span>
+                      <h4>Advanced Analytics</h4>
+                  </div>
+                  <p>Granular real-time data panels tracking listener attention thresholds, immediate skip rates, and repeat playback patterns across your catalog.</p>
+              </div>
+
+              <div class="feature-card culture-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">🔥</span>
+                      <h4>Stream Thermal Heatmaps</h4>
+                  </div>
+                  <p>Visualize exactly where your culture is expanding with geographic intensity indicators that update as clusters light up across the world map.</p>
+              </div>
+
+              <div class="feature-card culture-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">🧬</span>
+                      <h4>Audience Emotional Trends</h4>
+                  </div>
+                  <p>Analyze the prevailing emotional frequencies and baseline moods being registered when listeners engage with specific sound projects.</p>
+              </div>
+
+              <div class="feature-card culture-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">🎛️</span>
+                      <h4>Multi-Format Stem Uploads</h4>
+                  </div>
+                  <p>Distribute distinct channel tracks and stems for community remixes, collaborative production breakdowns, or spatial file optimization.</p>
+              </div>
+
+              <div class="feature-card culture-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">📅</span>
+                      <h4>Drag-and-Drop Scheduling</h4>
+                  </div>
+                  <p>An integrated dashboard built to easily manage single drops, major project iterations, and cross-platform distribution timelines.</p>
+              </div>
+
+              <div class="feature-card culture-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">🎚️</span>
+                      <h4>Automated AI Mastering</h4>
+                  </div>
+                  <p>Instant studio balancing algorithms that maximize track presence, equalize room acoustics, and prepare files for high-fidelity deployment.</p>
+              </div>
+
+              <div class="feature-card culture-card">
+                  <div class="card-glow-overlay"></div>
+                  <div class="card-header-wrap">
+                      <span class="card-icon">🎨</span>
+                      <h4>AI Cover Art Generator</h4>
+                  </div>
+                  <p>Seamlessly generate high-concept visual creative assets by feeding your specific track telemetry and contextual descriptions straight to the engine.</p>
+              </div>
+          </div>
+
+          <div class="ecosystem-disclosure">
+              <p>⚠️ Note: Platform features, reward frameworks, and engine parameters are architectural blueprints and subject to change during closed beta testing and deployment cycles.</p>
+          </div>
+      </section>
+
+      <section id="about" class="manifesto-section">
+          <div class="manifesto-container">
+              <span class="section-badge">Our Creed</span>
+              <h2>The Manifesto</h2>
+              
+              <div class="manifesto-content">
+                  <p class="lead-text">
+                      Music was never meant to be flattened into background noise for passive scrolling. It is an emotional frequency, a cultural lifeline, and a collective energy.
+                  </p>
+                  
+                  <div class="manifesto-body">
+                      <p>
+                          The current landscape treats art like disposable content and creators like cogs in an algorithm. We are rewriting that script. <strong>DazlFlow</strong> is a declaration of independence for independent music culture.
+                      </p>
+                      <p>
+                          We believe in deep listening over passive consumption. We believe creators deserve an uncompromised, fair economy to fuel their craft. Most importantly, we believe in the power of the collective—where listeners don't just follow artists, they build empires with them through shared Clans.
+                      </p>
+                      <p class="closing-call">
+                          This isn't just a platform upgrade. This is a cultural realignment. Welcome to the frequency.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section id="roadmap" class="roadmap-section">
+          <div class="roadmap-header">
+              <span class="section-badge">The Vision Runway</span>
+              <h2>The 36-Month Horizon</h2>
+              <p>Our strategic development map to transition from private ecosystem buildout to public culture network.</p>
+          </div>
+          
+          <div class="timeline-container">
+              <div class="timeline-line"></div>
+              
+              <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                      <span class="timeline-date">Year 1</span>
+                      <h4>FOUNDATION ERA (Current)</h4>
+                      <p>Mapping the AI emotion-response matrix, styling user journey wireframes, and building this exclusive founding waitlist community.</p>
+                  </div>
+              </div>
+
+              <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                      <span class="timeline-date">Year 2</span>
+                      <h4>THE BETA ERA</h4>
+                      <p>Deploying private closed beta (targeting 5,000 users / 500 creators), releasing cross-platform mobile app engines (iOS/Android), and activating creator tipping frameworks.</p>
+                  </div>
+              </div>
+
+              <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                      <span class="timeline-date">Year 3</span>
+                      <h4>THE LAUNCH ERA</h4>
+                      <p>Public MVP platform launch. Opening full subscription tiers, releasing our B2B Mood Curation API for global industry licensing, and hosting physical Daz IRL Sessions.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section id="contact" class="capture-section">
+          <div id="waitlist" class="capture-container">
+              <h2>THE MOVEMENT STARTS HERE.</h2>
+              <p>Secure your spot in the ecosystem baseline before the gates close.</p>
+              
+              <form class="waitlist-form generic-input-style" action="/waitlist" method="POST">
+                  <input type="email" name="email" placeholder="Enter Your Email Address" required class="waitlist-input">
+                  <button type="submit" class="waitlist-submit-btn">Join Waitlist</button>
+              </form>
+
+              <div class="capture-divider"><span>YOU CAN ALSO</span></div>
+
+              <div class="bridge-action-wrap">
+                  <a href="/fuel-the-flow" class="prelaunch-bridge-btn">
+                      👉 Fuel the Vision & Claim Pre-Launch Perks ➡️
+                  </a>
+              </div>
+          </div>
+      </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
         <p>Made with mood by DazlFlow 💙</p>
         <p>&copy; 2026 DazlFlow. All rights reserved.</p>
