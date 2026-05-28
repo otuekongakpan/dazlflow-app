@@ -903,6 +903,81 @@ footer.footer p:last-child {
     100% { transform: translateY(0px); }
 }
 
+/* Styling for the new Waitlist Value Proposition */
+.waitlist-value-prop {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.value-item {
+    flex: 1;
+    padding: 15px;
+    border-left: 1px solid #333; /* Gives it that editorial/newspaper feel */
+}
+
+.value-item h4 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.value-item p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #aaa;
+}
+
+/* Ensure the form remains centered and clear */
+.waitlist-form {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.manifesto-pillar {
+    margin: 40px 0;
+    padding-top: 30px;
+    border-top: 1px solid #333; /* The newspaper separator */
+}
+
+.manifesto-pillar h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    color: #00F0FF;
+    margin-bottom: 15px;
+}
+
+.manifesto-pillar p {
+    line-height: 1.8;
+    color: #C5EAFC;
+}
+
+/* Ensure your existing manifesto content looks consistent with the pillars */
+.manifesto-content {
+    margin: 40px 0;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+}
+
+/* Mobile responsiveness: stack items if screen is small */
+@media (max-width: 768px) {
+    .waitlist-value-prop {
+        flex-direction: column;
+    }
+    .value-item {
+        border-left: none;
+        border-bottom: 1px solid #333;
+        padding-bottom: 20px;
+    }
+}
+
+
 @media screen and (max-width: 600px) {
     body {
         padding-top: 0;
