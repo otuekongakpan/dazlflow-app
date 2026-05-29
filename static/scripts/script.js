@@ -170,3 +170,34 @@ function stopAmbientStream() {
     feedbackBox.style.backgroundColor = "rgba(255, 255, 255, 0.01)";
     feedbackBox.style.borderColor = "rgba(255, 255, 255, 0.04)";
 }
+
+// Function to handle UI loading states
+function handleFormSubmission(formElement) {
+    const submitBtn = formElement.querySelector('button[type="submit"]');
+    const spinner = document.getElementById('loading-doughnut'); // Your CSS element
+
+    // 1. Visual Block: Show spinner, disable button
+    if (spinner) spinner.style.display = 'block';
+    if (submitBtn) submitBtn.disabled = true;
+
+    // 2. Prevent repeat submissions by checking a flag
+    if (sessionStorage.getItem('isSubmitting')) {
+        return false; // Stop if already processing
+    }
+    sessionStorage.setItem('isSubmitting', 'true');
+    
+    return true; // Allow submission
+}
+
+window.addEventListener('load', () => {
+    sessionStorage.removeItem('isSubmitting');
+});
+// Attach to your form (assuming you have one <form> tag)
+const form = document.querySelector('form');
+if (form) {
+    form.addEventListener('submit', (e) => {
+        if (!handleFormSubmission(form)) {
+            e.preventDefault();
+        }
+    });
+}
