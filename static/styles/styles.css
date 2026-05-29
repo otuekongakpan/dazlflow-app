@@ -1019,8 +1019,12 @@ footer.footer p:last-child {
 
 .back-link:hover { background: #00F0FF; color: #000; }
 
-@media (max-width: 900px) { .contribution-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 600px) { .contribution-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { 
+    .contribution-grid { grid-template-columns: 1fr 1fr !important; } 
+}
+@media (max-width: 350px) { 
+    .contribution-grid { grid-template-columns: 1fr !important; } 
+}
 
 /* Container for the form to ensure elements are organized */
 .waitlist-form {
